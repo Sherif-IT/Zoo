@@ -1,0 +1,5 @@
+@startuml 
+CageManagee o--"1 pojo" AnimalPOJO
+CageManagee *--"-Cage" Cage 
+CageManagee o--"1 -dao" Dao 
+@enduml 

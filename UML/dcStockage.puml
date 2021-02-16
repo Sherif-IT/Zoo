@@ -1,0 +1,27 @@
+@startuml 
+interface  Dao<T>{
++inserer(T obj)
++lire(int cle):T
++List<T> liretous()
++modifier(int cle,T obj)
++effacer(T obj)
+effacer(int cle)
+}
+class DaoMemoire<T>{
+- List<T> lesElts
++ remplir()
+}
+class DaoFichier<T>
+DaoMemoire ..|> Dao
+DaoFichier ..|> Dao
+DaoJDBC ..|> Dao
+DaoJPA ..|> Dao
+DaoFactory ..>Dao :> fabrique/instancie une dao pour l'exterieur
+class DaoFactory<<singleton>>{
++Dao<Personne>  getDao()
+}
+class Manager{
+
+}
+Manager ..> DaoFactory
+@enduml

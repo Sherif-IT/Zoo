@@ -1,0 +1,15 @@
+@startuml
+title Séquence générale du zoo
+actor utilisateur
+boundary zoo
+control manageur
+collections Cage
+== Initialisation ==
+utilisateur -> zoo : <<create>>()
+zoo->manageur : <<create>>()
+loop N fois
+	manageur -> Cage:: <<create(cle,x,y)
+end
+== Affichage ==
+utilisateur ->zoo:
+@enduml 

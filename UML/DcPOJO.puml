@@ -1,0 +1,6 @@
+
+@startuml 
+class AnimalPOJO{}
+class GazellePOJO{}
+  AnimalPOJO o--"0:1"  GazellePOJO:-gaz
+@enduml
